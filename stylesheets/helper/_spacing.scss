@@ -1,0 +1,40 @@
+$spacer: 16px;
+
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer * 0.6875,
+  4: $spacer,
+  5: $spacer * 1.0625,
+  6: $spacer * 1.5,
+  7: $spacer * 1.625,
+  8: $spacer * 3,
+  9: $spacer * 4,
+  10: $spacer * 5.9375,
+);
+
+@each $i, $val in $spacers {
+  .m {
+    &l-#{$i} {
+      margin-left: $val;
+    }
+    &r-#{$i} {
+      margin-right: $val;
+    }
+    &b-#{$i} {
+      margin-bottom: $val;
+    }
+    &t-#{$i} {
+      margin-top: $val;
+    }
+  }
+  .p {
+    &b-#{$i} {
+      padding-bottom: $val;
+    }
+    &t-#{$i} {
+      padding-top: $val;
+    }
+  }
+}
